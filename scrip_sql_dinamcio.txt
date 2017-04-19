@@ -1,0 +1,27 @@
+//integer cod_dependencia // codigo de la depenencia para recuperar en dw_1
+//
+//
+//accepttext() // acepta el contenido de datawindows
+//cod_dependencia = dw_1.object.codigo[1] // se captura el codigo de la dependencia
+//dw_3.retrieve(cod_dependencia) // se recuperan los equipos de la dependencia
+////dw_3.setfocus()
+//
+
+
+String ls_codigo, ls_cadena
+
+
+
+dw_1.accepttext() // acepta el contenido de datawindows
+
+ls_codigo = string(dw_1.object.codigo[1] ) // se captura el codigo de la dependencia
+
+ls_cadena = "  SELECT c_equipos.placa,   &
+         c_equipos.nom_equipo,   &
+         c_equipos.cod_dep_uf  &
+    FROM c_equipos  &
+   WHERE c_equipos.cod_dep_uf = " + ls_codigo
+
+
+dw_3.Object.DataWindow.Table.Select= ls_cadena
+dw_3.retrieve()

@@ -1,0 +1,10 @@
+Save Format v3.0(19990112)
+@begin Unchecked
+@end;
+@begin Targets
+ 0 "costosx.pbt";
+ 1 "..\\Tienda_Perfumes\\perfumeria.pbt";
+ 2 "..\\lideres\\lideres.pbt";
+@end;
+DefaultTarget "..\\Tienda_Perfumes\\perfumeria.pbt";
+DefaultRemoteTarget "..\\Tienda_Perfumes\\perfumeria.pbt";
